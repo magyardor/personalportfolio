@@ -1,0 +1,20 @@
+:root {
+  --black-color: rgba(var(--black-color-v), 1);
+  --background-color: rgba(var(--black-color-v), 0.8);
+  --grey-color: rgba(var(--grey-color-v), 1);
+  --back-purple-color: rgba(var(--back-purple-v), 1);
+  --white-color: rgba(var(--white-color-v), 1);
+  --main-color: rgba(var(--main-color-v), 1);
+  --secondary-color: rgba(var(--secondary-color-v), 1);
+  --highlight-color: rgba(var(--highlight-color-v), 1);
+  --light-color: rgba(var(--light-color-v), 1);
+
+  --black-color-v: 0, 0, 0;
+  --grey-color-v: 196, 196, 196;
+  --back-purple-v: 118, 0, 255;
+  --white-color-v: 255, 255, 255;
+  --main-color-v: 142, 47, 252;
+  --secondary-color-v: 172, 50, 253;
+  --highlight-color-v: 246, 63, 247;
+  --light-color-v: 254, 106, 133;
+}
