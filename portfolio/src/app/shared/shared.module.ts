@@ -2,6 +2,7 @@ import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MaterialModule } from "./material.module";
+import { CustomIconComponent } from "./_components/custom-icon/custom-icon.component";
 
 @NgModule({
   imports: [
@@ -11,8 +12,12 @@ import { MaterialModule } from "./material.module";
     ReactiveFormsModule
   ],
   exports: [
-    MaterialModule
-  ]
+    MaterialModule,
+    CustomIconComponent,
+  ],
+  declarations: [
+    CustomIconComponent
+  ],
 })
 
 export class SharedModule { }

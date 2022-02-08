@@ -4,5 +4,38 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: #eee;
+}
+
+.sidenav-class {
+  background-color: var(--black-color);
+  width: 65px;
+}
+
+.mat-drawer-inner-container {
+  display: grid !important;
+}
+
+.list {
+  display: grid;
+}
+
+.icon {
+  padding-bottom: 2rem;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: var(--main-color);
+}
+
+.download {
+  color: var(--highlight-color);
+}
+
+.group {
+  display: grid !important;
+  justify-content: center !important;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
