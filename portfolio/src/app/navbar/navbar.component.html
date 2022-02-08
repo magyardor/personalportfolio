@@ -7,19 +7,19 @@
         </span>
       </div>
       <div class="group">
-        <span class="material-icons icon">
+        <span class="material-icons icon" [routerLink]="['/profile']" [routerLinkActive]="['selected']">
           person_outline
         </span>
-        <span class="material-icons icon">
+        <span class="material-icons icon" [routerLink]="['/school']" [routerLinkActive]="['selected']">
           school
         </span>
-        <span class="material-icons icon">
+        <span class="material-icons icon" [routerLink]="['/work']" [routerLinkActive]="['selected']">
           work_outline
         </span>
-        <span class="material-icons icon">
+        <span class="material-icons icon" [routerLink]="['/references']" [routerLinkActive]="['selected']">
           public
         </span>
-        <span class="material-icons icon">
+        <span class="material-icons icon" [routerLink]="['/message']" [routerLinkActive]="['selected']">
           chat_bubble_outline
         </span>
       </div>
@@ -33,5 +33,22 @@
       </div>
     </div>
   </mat-sidenav>
-  <mat-sidenav-content>main content</mat-sidenav-content>
+  <mat-sidenav-content style="display: flex;">
+    <div style="display: contents;">
+      <img src="../../assets/picture/IMG_1145.JPG" width="auto">
+      <div class="info">
+        <h1 class="name">Magyar Dorina</h1>
+        <h4 class="pos">Web Developer</h4>
+        <div class="logos">
+          <img src="../../assets/logos/linkedin.png" class="logo">
+          <img src="../../assets/logos/mail.png" class="logo">
+          <img src="../../assets/logos/insta.png" class="logo">
+          <img src="../../assets/logos/fb.png" class="logo">
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
 </mat-sidenav-container>
