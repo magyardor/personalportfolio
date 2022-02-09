@@ -1,40 +1,55 @@
 <mat-sidenav-container class="example-container">
-  <mat-sidenav mode="side" opened class="sidenav-class">
-    <div class="list">
-      <div class="group">
-        <span class="material-icons icon">
-          arrow_back_ios
-        </span>
+  <mat-sidenav mode="side" opened class="sidenav-class row">
+    <div style="display: flex;">
+      <div class="list">
+        <div class="group">
+          <span class="material-icons icon">
+            arrow_back_ios
+          </span>
+        </div>
+        <div class="group">
+          <span class="material-icons icon" [routerLink]="['/profile']" [routerLinkActive]="['selected']">
+            person_outline
+          </span>
+          <span class="material-icons icon" [routerLink]="['/school']" [routerLinkActive]="['selected']">
+            school
+          </span>
+          <span class="material-icons icon" [routerLink]="['/work']" [routerLinkActive]="['selected']">
+            work_outline
+          </span>
+          <span class="material-icons icon" [routerLink]="['/references']" [routerLinkActive]="['selected']">
+            public
+          </span>
+          <span class="material-icons icon" [routerLink]="['/message']" [routerLinkActive]="['selected']">
+            chat_bubble_outline
+          </span>
+        </div>
+        <div class="group">
+          <span class="material-icons icon">
+            translate
+          </span>
+          <span class="material-icons icon download">
+            cloud_download
+          </span>
+        </div>
       </div>
-      <div class="group">
-        <span class="material-icons icon" [routerLink]="['/profile']" [routerLinkActive]="['selected']">
-          person_outline
-        </span>
-        <span class="material-icons icon" [routerLink]="['/school']" [routerLinkActive]="['selected']">
-          school
-        </span>
-        <span class="material-icons icon" [routerLink]="['/work']" [routerLinkActive]="['selected']">
-          work_outline
-        </span>
-        <span class="material-icons icon" [routerLink]="['/references']" [routerLinkActive]="['selected']">
-          public
-        </span>
-        <span class="material-icons icon" [routerLink]="['/message']" [routerLinkActive]="['selected']">
-          chat_bubble_outline
-        </span>
-      </div>
-      <div class="group">
-        <span class="material-icons icon">
-          translate
-        </span>
-        <span class="material-icons icon download">
-          cloud_download
-        </span>
+      <div>
+        <img src="../../assets/picture/IMG_1145.JPG" class="image-style">
+        <div class="info">
+          <h1 class="name">Magyar Dorina</h1>
+          <h4 class="pos">Web Developer</h4>
+          <div class="logos">
+            <img src="../../assets/logos/linkedin.png" class="logo">
+            <img src="../../assets/logos/mail.png" class="logo">
+            <img src="../../assets/logos/insta.png" class="logo">
+            <img src="../../assets/logos/fb.png" class="logo">
+          </div>
+        </div>
       </div>
     </div>
   </mat-sidenav>
   <mat-sidenav-content style="display: flex;">
-    <div style="display: contents;">
+    <!-- <div style="display: contents; overflow-y: hidden;">
       <img src="../../assets/picture/IMG_1145.JPG" class="image-style">
       <div class="info">
         <h1 class="name">Magyar Dorina</h1>
@@ -46,8 +61,8 @@
           <img src="../../assets/logos/fb.png" class="logo">
         </div>
       </div>
-    </div>
-    <div class="contents">
+    </div> -->
+    <div class="contents" style="overflow-y: visible;">
       <router-outlet></router-outlet>
     </div>
   </mat-sidenav-content>

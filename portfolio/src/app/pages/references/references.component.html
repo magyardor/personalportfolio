@@ -5,7 +5,19 @@
       <div style="display:grid; justify-content:center;">
         <img src="../../../assets/picture/image-from-rawpixel-id-2597880-original.png" width="100%" height="50%">
         <h4 class="multicolortext title">Personal Site</h4>
-        <div class="desc">ngjngslkn</div>
+        <div class="desc">
+          <mat-accordion>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Személyes weboldal bemutató leírása
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <p>fhlknhlmnhb</p>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
         <div class="date-text">2022.</div>
         <div class="link">Forráskód megtekintése</div>
       </div>
@@ -14,7 +26,22 @@
       <div style="display:grid; justify-content:center;">
         <img src="../../../assets/picture/logo_page_header.png" width="100%">
         <h4 class="multicolortext title">Szakdolgozat</h4>
-        <div class="desc">Angular & NodeJS - The MEAN Stack Guide tananyag elvégzése. Webáruháza alkalmazás beépített adminisztrációs felülettel a könnyebb kezelhetőség érdekében. Különböző szoftverek</div>
+        <div class="desc">
+          <mat-accordion>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Szakdolgozat bemutató leírása
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <p>A program sikeresen bemutat egy működő webáruházat, ami kisvállalkozók saját
+                termékeinek értékesítésére alkalmas. Az alkalmazást első sorban egy vállalkozó általi
+                megkeresés céljából készítettem el. Az alkalmazás megvalósítására használt MEAN szoftverköteg nem egyedi, hiszen rengeteg projektnek az alapjaként szolgál, mégis a kliensoldalon használt
+                kiegészítő csomagjainak segítségével egy hangulatos, elsősorban kozmetikai eszközök értékesítését szolgáló webáruházat sikerült fejlesztenem.</p>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
         <div class="date-text">2021.szept. - 2021.dec.</div>
         <div class="link">Forráskód megtekintése</div>
       </div>

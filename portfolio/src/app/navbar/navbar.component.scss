@@ -8,15 +8,16 @@
 
 .sidenav-class {
   background-color: var(--black-color);
-  width: 65px;
+  width: 40%;
+  display: flex;
 }
 
 .mat-drawer-inner-container {
-  display: grid !important;
+  display: flex;
 }
 
 .list {
-  /* display: grid; */
+  margin: 1rem;
 }
 
 .icon {
@@ -47,9 +48,7 @@
 .info{
   position: absolute;
   bottom: 100px;
-  left: 15px;
   display: grid;
-  width: 40%;
   justify-items: center;
 }
 
