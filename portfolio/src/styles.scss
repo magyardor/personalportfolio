@@ -1,5 +1,26 @@
 @import "./theme/theme.scss";
 /* You can add global styles to this file, and also import other style files */
+
+/*  margin-top: 0px;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  font-size: 6rem;
+  background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+
+.multicolortext {
+  background: linear-gradient(to left,
+    var(--light-color) 85%,
+    var(--highlight-color) 93%,
+    var(--secondary-color),
+    var(--main-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 :host {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
@@ -58,6 +79,119 @@ p {
   opacity: 0.8;
 }
 
+.input {
+  -webkit-writing-mode: horizontal-tb !important;
+  /* font-style: ;
+  font-variant-ligatures: ;
+  font-variant-caps: ;
+  font-variant-numeric: ;
+  font-variant-east-asian: ;
+  font-weight: ;
+  font-stretch: ;
+  font-size: ;
+  font-family: ; */
+  text-rendering: auto;
+  color: -internal-light-dark(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  appearance: auto;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+  margin: 0em;
+  padding: 1px 2px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+}
+
+@mixin box-shadow {
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(var(--back-purple-color), 0.8);
+  -moz-box-shadow: 0px 4px 10px 0px rgba(var(--back-purple-color), 0.8);
+  box-shadow: 0px 4px 10px 0px rgba(var(--back-purple-color), 0.8);
+}
+@mixin button-properties {
+  border-width: 2px;
+  border-radius: 5px;
+  min-width: 140px;
+  min-height: 40px;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 4px;
+  transition: all 300ms ease-in-out;
+
+  &:hover {
+    @include box-shadow;
+    border: 1px solid var(--dark-color) !important;
+    transition: all 300ms ease-in-out;
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    box-shadow: none;
+    transition: none;
+  }
+}
+
+.btn-cta {
+  @include button-properties;
+  background-image: linear-gradient(
+    to left,
+    var(--main-color),
+    var(--secondary-color)
+  ) !important;
+  color: var(--white-color) !important;
+  font-size: large;
+  border: none !important;
+  padding: 0.5rem 1.5rem !important;
+}
+.btn-main {
+  @include button-properties;
+  background-color: var(--main-color) !important;
+  color: var(--light-color) !important;
+  border: 1px solid var(--main-color) !important;
+}
+.btn-secondary {
+  @include button-properties;
+  background-color: var(--white-color) !important;
+  color: var(--light-color) !important;
+  border-color: var(--main-color) !important;
+}
+
+@mixin colored-box-shadow {
+  @include box-shadow;
+  margin: 1rem;
+  padding: 1rem;
+}
+.white-box-shadow {
+  @include colored-box-shadow;
+  background-color: var(--white-color);
+}
+.primary-box-shadow {
+  @include colored-box-shadow;
+  background-color: var(--main-color);
+}
+.secondary-box-shadow {
+  @include colored-box-shadow;
+  background-color: var(--secondary-color);
+}
+.dark-box-shadow {
+  @include colored-box-shadow;
+  background-color: var(--dark-color);
+}
+.light-box-shadow {
+  @include colored-box-shadow;
+  background-color: var(--light-color);
+}
+
 .content {
   display: flex;
   margin: 82px auto 32px;
@@ -89,13 +223,13 @@ svg.material-icons:not(:last-child) {
 
 .card {
   border-radius: 4px;
-  border: 1px solid #eee;
-  background-color: #fafafa;
-  height: 40px;
-  width: 200px;
+  border: 1px solid var(--dark-color);
+  background-color: var(--black-color);
+  @include box-shadow;
+  height: 100%;
+  /* width: 80%; */
   margin: 0 8px 16px;
   padding: 16px;
-  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
