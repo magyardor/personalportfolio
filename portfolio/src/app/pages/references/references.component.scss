@@ -26,4 +26,7 @@
 .link {
   text-align: center;
   color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
 }
