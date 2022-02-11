@@ -31,8 +31,13 @@ const routes: Routes = [
       {
         path: 'message',
         component: MessageComponent
-      }
+      },
+      { path: '**',
+        redirectTo: 'profile',
+        pathMatch: 'full'
+      },
     ]
+
   }
 ];
 
