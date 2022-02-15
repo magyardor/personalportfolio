@@ -232,10 +232,10 @@ svg.material-icons:not(:last-child) {
 }
 
 .card {
-  border-radius: 4px;
+  /* border-radius: 4px;
   border: 1px solid var(--dark-color);
   background-color: var(--black-color);
-  @include box-shadow;
+  @include box-shadow; */
   height: 100%;
   margin: auto;
   margin-bottom: 2rem;
