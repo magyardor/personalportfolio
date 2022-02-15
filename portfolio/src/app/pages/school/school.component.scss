@@ -5,7 +5,12 @@
   font-style: italic;
 }
 
+.info-group {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .canvas-group {
   display: flex;
-  width: 30%;
+  width: 50%;
 }

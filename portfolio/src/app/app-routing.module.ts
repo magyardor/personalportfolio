@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MessageComponent } from './pages/message/message.component';
 import { ProfileComponent } from './pages/profile/profile.component';
@@ -42,7 +43,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes),
+    TranslateModule.forRoot(),
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
