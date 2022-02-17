@@ -18,6 +18,7 @@ export const locale = {
         EMAIL_ADDRESS: 'Email address',
         MESSAGE: 'Message',
         FULL_NAME: 'Full name',
+        CONTACT_DETAILS: 'Contact details'
       },
       PROFILE: {
         ABOUT_MYSELF: 'About myself',
@@ -65,4 +66,4 @@ export const locale = {
       }
     }
   }
-}
+};

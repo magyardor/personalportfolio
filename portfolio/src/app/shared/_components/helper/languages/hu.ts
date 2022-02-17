@@ -18,6 +18,7 @@ export const locale = {
         EMAIL_ADDRESS: 'Email-cím',
         MESSAGE: 'Üzenet',
         FULL_NAME: 'Teljes név',
+        CONTACT_DETAILS: 'Elérhetőségek'
       },
       PROFILE: {
         ABOUT_MYSELF: 'Magamról',
@@ -65,4 +66,4 @@ export const locale = {
       }
     }
   }
-}
+};
