@@ -1,12 +1,14 @@
 <mat-sidenav-container class="example-container">
-  <mat-sidenav mode="side" opened class="sidenav-class row">
-    <div style="display: flex;">
+  <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" opened class="sidenav-class row">
+    <div class="menu">
+      <button (click)="snav.toggle()">
+        <span class="material-icons icon">
+          arrow_back_ios
+        </span>
+      </button>
+    </div>
+    <div class="navbar-group" style="display: flex;">
       <div class="list">
-        <div class="group">
-          <span class="material-icons icon">
-            arrow_back_ios
-          </span>
-        </div>
         <div class="group">
           <span class="material-icons icon" [routerLink]="['/profile']" [routerLinkActive]="['selected']">
             person_outline
@@ -31,7 +33,7 @@
           </span>
         </div>
       </div>
-      <div style="max-height: 927px;">
+      <div class="nav-image" style="max-height: 937px;">
         <img src="../../assets/picture/IMG_1145.JPG" class="image-style">
         <div class="info">
           <h1 class="name">{{'GENERIC.NAME' | translate}}</h1>
@@ -46,7 +48,7 @@
       </div>
     </div>
   </mat-sidenav>
-  <mat-sidenav-content style="display: flex; margin-left: 600px;">
+  <mat-sidenav-content class="sidenav-content">
     <div class="contents" style="overflow-y: visible;">
       <router-outlet></router-outlet>
     </div>

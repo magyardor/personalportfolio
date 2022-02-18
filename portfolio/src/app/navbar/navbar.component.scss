@@ -19,6 +19,9 @@
 
 .list {
   margin: 1rem;
+  padding-top: 13rem;
+  display: grid;
+  align-items: center;
 }
 
 .icon {
@@ -83,8 +86,50 @@
   cursor: pointer;
 }
 
+.sidenav-content {
+  display: flex;
+  margin-left: 600px;
+}
+
 .contents {
   margin: 1rem;
   padding: 1rem;
   width: 100%;
+}
+
+.menu {
+  display: none;
+}
+
+@media (max-width: 50em) {
+  .sidenav-class {
+    position: fixed;
+    inset: 0 50% 0 0;
+    flex-direction: column;
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(1rem);
+  }
+
+  .nav-image {
+    display: none;
+  }
+
+  .navbar-group {
+    justify-content: center;
+  }
+
+  .sidenav-content {
+    margin-left: 1px !important;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .list {
+    padding-top: 5rem;
+  }
 }
