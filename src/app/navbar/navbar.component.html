@@ -1,7 +1,7 @@
-<mat-sidenav-container class="example-container">
-  <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" opened class="sidenav-class row">
+<mat-sidenav-container class="example-container" (backdropClick)="close('backdrop')">
+  <mat-sidenav #sidenav (keydown.escape)="close('escape')" opened disableClose class="sidenav-class row">
     <div class="menu">
-      <button (click)="snav.toggle()">
+      <button class="menu-btn" (click)="close('toggle button')">
         <span class="material-icons icon">
           arrow_back_ios
         </span>
@@ -39,18 +39,26 @@
           <h1 class="name">{{'GENERIC.NAME' | translate}}</h1>
           <h4 class="pos">{{'GENERIC.ROLE' | translate}}</h4>
           <div class="logos">
-            <img src="../../assets/logos/linkedin.png" class="logo">
-            <img src="../../assets/logos/mail.png" class="logo">
-            <img src="../../assets/logos/insta.png" class="logo">
-            <img src="../../assets/logos/fb.png" class="logo">
+            <a href="https://www.linkedin.com/in/dorina-magyar/" target="_blank"><img src="../../assets/logos/linkedin.png" class="logo"></a>
+            <a routerLink="/message"><img src="../../assets/logos/mail.png" class="logo"></a>
+            <a href="https://www.instagram.com/magyardorina/" target="_blank"><img src="../../assets/logos/insta.png" class="logo"></a>
+            <a href="https://www.facebook.com/dorina.magyar2" target="_blank"><img src="../../assets/logos/fb.png" class="logo"></a>
           </div>
         </div>
       </div>
     </div>
   </mat-sidenav>
-  <mat-sidenav-content class="sidenav-content">
-    <div class="contents" style="overflow-y: visible;">
-      <router-outlet></router-outlet>
-    </div>
-  </mat-sidenav-content>
 </mat-sidenav-container>
+<div class="mobile-menu">
+  <button class="mobile-btn-menu" (click)="sidenav.open()">
+    <span class="material-icons icon ">
+      menu
+    </span>
+  </button>
+</div>
+<!-- <div class="sidenav-content">
+  <div class="contents" style="overflow-y: visible;">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+ -->

@@ -1,0 +1,30 @@
+.sidenav-content {
+  display: flex;
+  position: absolute;
+  left: 600px;
+  top: 0;
+  right: 0;
+  /* background-color: var(--black-color); */
+  color: var(--white-color);
+  max-height: 937px;
+  overflow: auto;
+}
+
+.contents {
+  margin: 1rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+@media (max-height: 722px) {
+  .sidenav-content {
+    max-height: 721px;
+  }
+}
+
+@media (max-width: 50em) {
+  .sidenav-content {
+    position: fixed;
+    left: 0;
+  }
+}

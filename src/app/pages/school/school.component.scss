@@ -14,3 +14,9 @@
   display: flex;
   width: 50%;
 }
+
+@media (max-width: 50em){
+  .info-group {
+    display: block;
+  }
+}

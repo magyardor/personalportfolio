@@ -12,6 +12,7 @@ import { SchoolComponent } from './pages/school/school.component';
 import { WorkComponent } from './pages/work/work.component';
 import { ReferencesComponent } from './pages/references/references.component';
 import { MessageComponent } from './pages/message/message.component';
+import { SidebarModule } from '@syncfusion/ej2-angular-navigations';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MessageComponent } from './pages/message/message.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    SidebarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

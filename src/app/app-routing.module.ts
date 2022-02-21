@@ -10,9 +10,10 @@ import { WorkComponent } from './pages/work/work.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'navbar',
     component: NavbarComponent,
-    children: [
+  },
+    /* children: [ */
       {
         path: 'profile',
         component: ProfileComponent
@@ -37,9 +38,9 @@ const routes: Routes = [
         redirectTo: 'profile',
         pathMatch: 'full'
       },
-    ]
+   /*  ] */
 
-  }
+ /*  } */
 ];
 
 @NgModule({

@@ -248,6 +248,14 @@ svg.material-icons:not(:last-child) {
   line-height: 24px;
 }
 
+
+@media (max-width: 50em){
+  .card {
+    width: 100%;
+    padding: 0px;
+  }
+}
+
 .card-container .card:not(:last-child) {
   margin-right: 0;
 }
@@ -409,6 +417,10 @@ svg#clouds {
   width: 1920px;
 }
 
+.mat-drawer-inner-container {
+  overflow: hidden;
+}
+
 
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
@@ -441,4 +453,4 @@ svg#clouds {
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; overflow-y: hidden; background-color: var(--black-color);}
