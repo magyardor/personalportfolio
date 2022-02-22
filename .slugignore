@@ -1,6 +1,4 @@
 # Ignore all logfiles and tempfiles.
-./dist
-./src
 ./node_modules
 ./heroku
 ./karma
