@@ -2,28 +2,24 @@
   <div>
     <h1 class="multicolortext" style="margin-bottom: 2rem;">{{'PAGE.MESSAGES.CONTACT' | translate}}</h1>
     <div>
-      <form>
+      <form action="mailto:dorina.magyar@protonmail.com" method="post" enctype="text/plain">
         <div style="display: grid">
           <mat-form-field appearance="outline">
-            <mat-label>{{'PAGE.MESSAGES.FIRST_NAME' | translate}}</mat-label>
-            <input matInput type="text">
-          </mat-form-field>
-          <mat-form-field appearance="outline">
-            <mat-label>{{'PAGE.MESSAGES.LAST_NAME' | translate}}</mat-label>
-            <input matInput type="text">
+            <mat-label>{{'PAGE.MESSAGES.FULL_NAME' | translate}}</mat-label>
+            <input matInput type="text" name="full_name">
           </mat-form-field>
         </div>
         <div style="display: grid">
           <mat-form-field appearance="outline">
             <mat-label>{{'PAGE.MESSAGES.EMAIL_ADDRESS' | translate}}</mat-label>
-            <input matInput type="text">
+            <input matInput type="text" name="mail">
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>{{'PAGE.MESSAGES.MESSAGE' | translate}}</mat-label>
-            <textarea matInput rows="4" placeholder="Description"></textarea>
+            <textarea matInput rows="4" placeholder="Description" name="message"></textarea>
           </mat-form-field>
         </div>
-        <button class="btn-cta">{{'GENERIC.ACTION.SEND' | translate}}</button>
+        <button class="btn-cta" type="submit" value="Send">{{'GENERIC.ACTION.SEND' | translate}}</button>
       </form>
     </div>
   </div>
