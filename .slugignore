@@ -1,8 +1,13 @@
-*.psd
+# Ignore all logfiles and tempfiles.
+./tmp
+./dist
+./src
+./node_modules
+./heroku
+./karma
+./package-lock.json
+./e2e
+./assets
 *.pdf
-/test
-/spec
-/assets
-/e2e
-/karma.conf.js
-*.md
+*.png
+
