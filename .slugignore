@@ -1,5 +1,4 @@
 # Ignore all logfiles and tempfiles.
-./tmp
 ./dist
 ./src
 ./node_modules
