@@ -12,28 +12,26 @@ const routes: Routes = [
   {
     path: 'navbar',
     component: NavbarComponent,
-    children: [
-      {
-        path: 'profile',
-        component: ProfileComponent
-      },
-      {
-        path: 'school',
-        component: SchoolComponent
-      },
-      {
-        path: 'work',
-        component: WorkComponent
-      },
-      {
-        path: 'references',
-        component: ReferencesComponent
-      },
-      {
-        path: 'message',
-        component: MessageComponent
-      },
-    ]
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent
+  },
+  {
+    path: 'school',
+    component: SchoolComponent
+  },
+  {
+    path: 'work',
+    component: WorkComponent
+  },
+  {
+    path: 'references',
+    component: ReferencesComponent
+  },
+  {
+    path: 'message',
+    component: MessageComponent
   },
   { path: '**',
     redirectTo: 'profile',
