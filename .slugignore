@@ -1,10 +1,2 @@
 # Ignore all logfiles and tempfiles.
-./node_modules
-./heroku
-./karma
-./package-lock.json
-./e2e
-./assets
-*.pdf
-*.png
 
