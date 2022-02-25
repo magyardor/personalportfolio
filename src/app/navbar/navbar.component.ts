@@ -19,7 +19,7 @@ export class NavbarComponent{
   }
 
   downloadPdf() {
-    const pdfUrl = './assets/Magyar_Dorina_CV';
+    const pdfUrl = './assets/Magyar_Dorina_CV.pdf';
     const pdfName = 'Magyar_Dorina_CV';
     FileSaver.saveAs(pdfUrl, pdfName);
   }
